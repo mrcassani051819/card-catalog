@@ -1,0 +1,14 @@
+<div *ngIf="card">
+    <h2>Card Details</h2>
+    <div><span>ID: </span>{{card.id}}</div>
+    <div>
+        <label for="number">Number: </label>
+        <input id="number" [(ngModel)]="card.number" placeholder="Number">
+        <br/>
+        <label for="name">Name: </label>
+        <input id="name" [(ngModel)]="card.name" placeholder="Name">
+        <br/>
+    </div>
+</div>
+<button (click)="save()">Save</button>
+<button (click)="goBack()">Back</button>

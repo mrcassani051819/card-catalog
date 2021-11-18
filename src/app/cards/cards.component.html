@@ -1,0 +1,18 @@
+<h2>My Cards</h2>
+<ul class="cards">
+    <li *ngFor="let card of cards">
+        <a routerLink="/detail/{{card.id}}">
+            <span class="badge">{{card.number}}</span> {{card.name}}
+        </a>
+        <button class="delete-button" (click)="delete(card)">Delete</button>
+    </li>
+</ul>
+<div>
+    <label for="number">Number: </label>
+    <input id="new-card" #number/>
+    <br/>
+    <label for="name">Name: </label>
+    <input id="new-card" #name/>
+    <br/>
+    <button class="add-button" (click)="add(number.value, name.value); number.value=''; name.value=''">Add Card</button>
+</div>

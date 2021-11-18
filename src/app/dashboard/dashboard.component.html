@@ -1,0 +1,5 @@
+<h2>Top Cards</h2>
+<div class="cards-menu">
+    <a *ngFor="let card of cards" routerLink="/detail/{{card.id}}">{{card.name}}</a>
+</div>
+<app-card-search></app-card-search>
